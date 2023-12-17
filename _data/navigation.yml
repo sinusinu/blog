@@ -1,0 +1,24 @@
+# main links
+main:
+  - title: "시잡도"
+    url: /sinutools/
+  # - title: "카테고리"
+  #   url: /categories/
+  # - title: "태그"
+  #   url: /tags/
+  # - title: "정보"
+  #   url: /about/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+category-sidebar:
+  - title: "카테고리"
+    children:
+      - title: "잡담"
+        url: "/categories/잡담"
+        category: "잡담"
+      - title: "컴푸터"
+        url: "/categories/컴푸터"
+        category: "컴푸터"

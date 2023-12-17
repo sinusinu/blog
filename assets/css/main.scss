@@ -1,0 +1,38 @@
+--- 
+--- 
+
+@charset "utf-8";
+
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$serif      : "Noto Serif KR", Georgia, Times, serif;
+$sans-serif : "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace  : "D2Coding", Monaco, Consolas, "Lucida Console", monospace;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+html {
+    font-size: 18px;
+    @include breakpoint($medium) { font-size: 18px; }
+    @include breakpoint($large) { font-size: 20px; }
+    @include breakpoint($x-large) { font-size: 20px; }
+}
+
+.img-cap {
+    text-align: center;
+    font-size: 0.75em;
+    font-style: italic;
+    margin-top: -16px;
+    margin-bottom: 16px;
+}
+
+.code-title {
+    text-align: center;
+    font-size: 0.8em;
+}
