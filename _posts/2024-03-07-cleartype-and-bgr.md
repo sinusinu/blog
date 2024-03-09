@@ -1,7 +1,7 @@
 ---
 title: "이상한 모니터 이야기"
 date: 2024-03-09 15:28:00 +0900
-last_modified_at: 2024-03-09 15:46:00 +0900
+last_modified_at: 2024-03-09 16:03:00 +0900
 categories: [ "컴푸터" ]
 excerpt: "엣지 케이스의 고통"
 ---
@@ -109,7 +109,7 @@ Steam은 약간 특이 케이스인게 대부분의 화면에서 흑백(비-서�
 
 ### JetBrains IDE
 
-JetBrains사의 IDE들은 Windows 상에서 모두 BGR 서브픽셀 안티에일리어싱을 지원하지 않는다. JetBrains 측의 변명은 이것이 Java 런타임의 문제이며 자기들이 어떻게 할 수 있는 게 아니라고 한다.
+JetBrains사의 IDE들은 Windows 상에서 모두 강제로 RGB 서브픽셀 안티에일리어싱을 사용한다. JetBrains 측의 변명은 이것이 Java 런타임의 문제이며 자기들이 어떻게 할 수 있는 게 아니라고 한다.
 
 <img src="/assets/images/cleartype-and-bgr/ec-android.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">Android Studio</div>
