@@ -1,7 +1,7 @@
 ---
 title: "이상한 모니터 이야기"
 date: 2024-03-09 15:28:00 +0900
-last_modified_at: 2024-03-09 16:03:00 +0900
+last_modified_at: 2024-03-14 09:46:00 +0900
 categories: [ "컴푸터" ]
 excerpt: "엣지 케이스의 고통"
 ---
@@ -88,50 +88,9 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 
 하지만...
 
-## 엣지 케이스의 고통
-
-BGR PC 모니터가 일반적이지 않은 특이한 경우다 보니, 운영체제 설정을 무시하고 RGB 안티에일리어싱을 사용하는 프로그램이 툭툭 튀어나오는 경우가 종종 있다. 아래는 그러한 일부 프로그램들의 예시로, 명백하게 RGB 안티에일리어싱을 사용하고 있음을 확인할 수 있도록 텍스트 일부를 매우 크게 확대해놨다.
-
-### Chromium/CEF 기반 앱들
-
-Chromium 엔진의 텍스트 렌더러는 운영체제의 서브픽셀 레이아웃 설정을 존중하지 않는 듯하다. 하이브리드 웹앱의 시대가 다가오면서 CEF나 Electron 등을 GUI 프론트엔드로 사용하는 앱이 제법 많아졌는데, 이런 앱들이 BGR 화면을 제대로 지원하지 않는 모습을 볼 때마다 짜증이 난다.
-
-<img src="/assets/images/cleartype-and-bgr/ec-edge.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">Microsoft Edge, Chromium 기반</div>
-
-<img src="/assets/images/cleartype-and-bgr/ec-steam.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">Steam 클라이언트, CEF 기반</div>
-
-Steam은 약간 특이 케이스인게 대부분의 화면에서 흑백(비-서브픽셀) 안티에일리어싱을 사용하고, 서브픽셀 안티에일리어싱을 사용하는 곳에서도 대부분은 시스템 설정을 따르는데, 아주 극히 일부분에서 제멋대로 RGB 서브픽셀 안티에일리어싱을 하는 장소가 존재한다. 온갖 방식이 뒤섞여 사용되는 것이 스팀답다고 해야하나...
-
-<img src="/assets/images/cleartype-and-bgr/ec-discord.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">Discord, Electron 기반</div>
-
-### JetBrains IDE
-
-JetBrains사의 IDE들은 Windows 상에서 모두 강제로 RGB 서브픽셀 안티에일리어싱을 사용한다. JetBrains 측의 변명은 이것이 Java 런타임의 문제이며 자기들이 어떻게 할 수 있는 게 아니라고 한다.
-
-<img src="/assets/images/cleartype-and-bgr/ec-android.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">Android Studio</div>
-
-<img src="/assets/images/cleartype-and-bgr/ec-intellij.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">IntelliJ IDEA</div>
-
-다행히도 JetBrains IDE는 비트맵 폰트와 흑백 안티에일리어싱을 모두 지원하기 때문에, 원하는 방식으로 문제를 우회해 사용할 수는 있다.
-
-<img src="/assets/images/cleartype-and-bgr/ec-android-fix.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">부드러운 글자를 원한다면 흑백 안티에일리어싱</div>
-
-<img src="/assets/images/cleartype-and-bgr/ec-intellij-fix.png" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">높은 가독성을 원한다면 비트맵 폰트를 사용할 수 있다</div>
-
-### 그리고 무수히 많은 스크린샷
-
-인터넷에 올라와있는 Windows의 스크린샷을 보면, 십중팔구는 RGB 서브픽셀 안티에일리어싱된 글자가 박혀있다. 이건 정말 어쩔 수 없다.
-
 ## 내가 찍은 스크린샷은?
 
-스크린샷 얘기가 나온 김에 생각해본 점이, 그럼 내가 찍은 스크린샷은? 하는 문제였다. 내가 찍은 BGR 서브픽셀 안티에일리어싱된 스크린샷들은 인터넷에 올라가서 대다수의 RGB 모니터에서 이상하게 보일 것이 뻔한데, 이걸 나는 정상적으로 보인다고 오케이 하고 넘어갈 일인가?
+이제 내 컴퓨터에서 렌더되는 글자는 BGR 화면에 맞게 그려지지만, 종종 인터넷에서 남들이 찍은 RGB 서브픽셀 안티에일리어싱된 스크린샷이 보이면 어쩔 수 없이 글자가 번져보였는데, 그걸 보다 보니 그러면 내가 찍은 스크린샷은? 하는 생각이 들었다. 내가 찍은 BGR 서브픽셀 안티에일리어싱된 스크린샷들은 인터넷에 올라가서 대다수의 RGB 모니터에서 이상하게 보일 것이 뻔한데, 이걸 이제 나는 정상적으로 보인다 하고 오케이 하고 넘어갈 일인가?
 
 고심 끝에 그냥 내 모니터에서는 서브픽셀 안티에일리어싱을 포기하고, 흑백 안티에일리어싱을 사용하기로 했다.
 
