@@ -1,7 +1,7 @@
 ---
 title: "이상한 모니터 이야기"
 date: 2024-03-09 15:28:00 +0900
-last_modified_at: 2024-03-14 09:46:00 +0900
+last_modified_at: 2024-03-17 02:19:00 +0900
 categories: [ "컴푸터" ]
 excerpt: "엣지 케이스의 고통"
 ---
@@ -26,7 +26,7 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 이 세 가지 색의 밝기는 다른 색의 밝기와 완전히 별도로 조작될 수 있어야 하기 때문에, 각 픽셀마다 개별 색을 내는 부품이 따로따로 심어져 있으며, 이 개별 색을 나타내는 픽셀을 서브픽셀이라고 하며, 이러한 서브픽셀을 픽셀 안에 배치하는 방법을 서브픽셀 레이아웃이라고 부른다.
 
 <img src="/assets/images/cleartype-and-bgr/LCD_RGB.jpg" style="display:block; margin-left:auto; margin-right:auto">
-<div class="img-cap">일반적인 RGB 서브픽셀 레이아웃 / Luís Flávio Loureiro dos Santos, CC BY 3.0 DEED</div>
+<div class="img-cap">일반적인 RGB 서브픽셀 레이아웃 / Luís Flávio Loureiro dos Santos, CC BY 3.0</div>
 
 가장 일반적으로 쓰이는 서브픽셀 레이아웃은 RGB로, 1/3 너비의 서브픽셀을 빨강, 초록, 파랑 순서대로 배치하는 것을 의미한다.
 
