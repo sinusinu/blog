@@ -253,6 +253,8 @@ object? Activator::CreateInstance(Type type) {
 ```
 <div class="img-cap">실행되는 코드는 아니다, 걍 이런 느낌</div>
 
+== 추가 설명 끝 ==
+
 아무튼 이렇게 공급자 어셈블리 안의 `IPlugin` 상속 클래스의 인스턴스를 하나씩 만들어서 `loadedPlugins` 안에 모두 긁어모으는 데 성공했다!
 
 사용은 그냥 `IPlugin` 사용하듯 사용하면 된다.
