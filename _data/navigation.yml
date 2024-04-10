@@ -22,3 +22,6 @@ category-sidebar:
       - title: "컴푸터"
         url: "/categories/컴푸터"
         category: "컴푸터"
+      - title: "코드"
+        url: "/categories/코드"
+        category: "코드"
