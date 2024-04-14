@@ -1,7 +1,7 @@
 ---
 title: "C#으로 단순한 플러그인 시스템 구축하기"
 date: 2024-03-20 22:16:00 +0900
-last_modified_at: 2024-04-10 22:17:00 +0900
+last_modified_at: 2024-04-14 12:56:00 +0900
 categories: [ "코드" ]
 excerpt: "정말 단순한 예제 포함"
 ---
@@ -205,7 +205,7 @@ where type.IsClass &&
 select (IPlugin?)Activator.CreateInstance(type);
 ```
 
-추가 설명이 필요할 것 같은 부분들에 관하여...
+== 이 코드의 추가 설명 ==
 
 ```csharp
 type.GetInterfaces().Select(i => i is IPlugin).Any()
@@ -234,7 +234,7 @@ DogPlugin
 <GoToSleepAsync>d__15
 ```
 
-`System.Runtime.CompilerServices.CompilerGeneratedAttribute`가 선언되어 있는 클래스를 걸러내면 아래 2개의 이상한 클래스들을 걸러낼 수 있다.
+여기서 `CompilerGeneratedAttribute`가 선언되어 있는 클래스를 걸러내면 아래 2개의 이상한 클래스들을 걸러낼 수 있다.
 
 ```csharp
 select (IPlugin?)Activator.CreateInstance(type);
