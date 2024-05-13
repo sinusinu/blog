@@ -93,6 +93,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-sitemap
 
 exclude:
   - .sass-cache/

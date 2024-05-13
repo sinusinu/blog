@@ -259,6 +259,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-include-cache
   jekyll-paginate
+  jekyll-sitemap
 
 BUNDLED WITH
    2.4.19
