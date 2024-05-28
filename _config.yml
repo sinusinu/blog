@@ -21,7 +21,7 @@ author:
 
 minimal_mistakes_skin: "dark"
 locale: "ko-KR"
-date_format: "%Y/%m/%d %H:%M"
+date_format: "%Y/%m/%d"
 search: true
 timezone: Asia/Seoul
 words_per_minute: 150
