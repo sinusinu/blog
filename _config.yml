@@ -19,7 +19,8 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sinusinu"
 
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "default"
+minimal_mistakes_skin_dark: "dark"
 locale: "ko-KR"
 date_format: "%Y/%m/%d"
 search: true
