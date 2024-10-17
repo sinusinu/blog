@@ -18,6 +18,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sinusinu"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-brands fa-bluesky"
+      url: "https://bsky.app/profile/sinu.pe.kr"
 
 minimal_mistakes_skin: "default"
 minimal_mistakes_skin_dark: "dark"
