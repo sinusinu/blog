@@ -5,7 +5,7 @@ email: cpu344@gmail.com
 description: >-
   돌아온 스레기 블로그
 baseurl: ""
-url: https://sinusinu.github.io
+url: https://sinu.pe.kr
 # twitter_username: 
 github_username: sinusinu
 repository: sinusinu/sinusinu.github.io
@@ -15,9 +15,9 @@ author:
   avatar: "/assets/images/profile.jpg"
   bio: 그럴 수도 있지
   links:
-    - label: "Bluesky"
-      icon: "fab fa-fw fa-brands fa-bluesky"
-      url: "https://bsky.app/profile/sinu.pe.kr"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-brands fa-x-twitter"
+      url: "https://x.com/sinuthesinu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sinusinu"
