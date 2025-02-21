@@ -2,7 +2,7 @@
 title: "C#으로 단순한 플러그인 시스템 구축하기"
 date: 2024-03-20 22:16:00 +0900
 last_modified_at: 2024-04-14 12:56:00 +0900
-categories: [ "코드" ]
+categories: [ "컴푸터" ]
 excerpt: "정말 단순한 예제 포함"
 ---
 

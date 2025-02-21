@@ -2,7 +2,7 @@
 title: "프로젝트 둘기N: 뉴로-라이크 AI 컴패니언 엔진"
 date: 2024-11-02 19:34:00 +0900
 last_modified_at: 2024-11-03 12:48:00 +0900
-categories: [ "프로젝트" ]
+categories: [ "컴푸터" ]
 excerpt: "새대가리와 함께 춤을"
 ---
 
