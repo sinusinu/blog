@@ -4,6 +4,7 @@ date: 2025-02-04 01:14:00 +0900
 last_modified_at: 2025-02-04 01:49:00 +0900
 categories: [ "잡담" ]
 excerpt: "또?"
+published: false
 ---
 
 ## 내가 졌다
