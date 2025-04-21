@@ -1,19 +1,20 @@
-title: 시누의 블로그 2.0
-subtitle: 돌아온 스레기 블로그
+title: 시누의 블로그
+subtitle: 코딩이랑 잡담이랑 뒤죽박죽
 name: sinu
 email: cpu344@gmail.com
 description: >-
-  돌아온 스레기 블로그
-baseurl: ""
+  코딩이랑 잡담이랑 뒤죽박죽
+domain: sinu.pe.kr
 url: https://sinu.pe.kr
+baseurl: "/blog/"
 # twitter_username: 
 github_username: sinusinu
-repository: sinusinu/sinusinu.github.io
+repository: sinusinu/blog
 
 author:
   name: "sinu"
   avatar: "/assets/images/profile.jpg"
-  bio: 그럴 수도 있지
+  bio: 우울한 코딩쟁이
   links:
     - label: "Bluesky"
       icon: "fab fa-fw fa-brands fa-bluesky"
