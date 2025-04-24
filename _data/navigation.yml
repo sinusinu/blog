@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "시잡도"
-    url: /sinutools/
+    url: "https://sinu.pe.kr/sinutools/"
 
 category-sidebar:
   - title: "카테고리"
