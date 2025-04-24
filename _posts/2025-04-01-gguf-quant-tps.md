@@ -78,4 +78,4 @@ excerpt: "검색엔진에 걸려라 얍"
 ## 개 후진 그래프™
 PP는 프롬프트가 짧아서 그런지 값이 유의미하게 안정적이진 않은 것 같아서, 그래프에서는 TG만 비교했다.
 
-![엑셀 그래프 무쌩겨써](/assets/images/gguf-quant-tps/428482220-9ebb6b58-7c3f-4e90-a93b-75fba8bdfc1c.png)
+![엑셀 그래프 무쌩겨써](/blog/assets/images/gguf-quant-tps/428482220-9ebb6b58-7c3f-4e90-a93b-75fba8bdfc1c.png)

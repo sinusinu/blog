@@ -22,7 +22,7 @@ excerpt: "새대가리와 함께 춤을"
 
 팰월드 열풍이 사그라들기 시작한 다음 달, OpenAI의 텍스트 생성 API에 관심이 생긴 나는 둘기에게 AI 챗봇 기능을 넣어보기로 했다.
 
-<img src="/assets/images/doolgi-n-writeup/chatbot.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/doolgi-n-writeup/chatbot.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">AI 둘기의 첫 마디 (재현)</div>
 
 이후로 둘기는 이런저런 온갖 잡기능들을 주렁주렁 매달아보는 실험적 프로젝트로서 무럭무럭 자라났고, 이젠 관리가 슬슬 버거워지는 정도의 크기가 되어있다.
@@ -48,7 +48,7 @@ excerpt: "새대가리와 함께 춤을"
 
 ## 둘기N의 구조
 
-<img src="/assets/images/doolgi-n-writeup/dn-arch.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/doolgi-n-writeup/dn-arch.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">있어보이는 검은 배경 PPT</div>
 
 이 프로젝트에서 메인 프로그램은 백엔드 <b>구구 게이트웨이</b>와 프론트엔드 <b>둘기N</b>의 두 프로그램이다.

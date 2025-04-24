@@ -12,7 +12,7 @@ excerpt: "엣지 케이스의 고통"
 
 그러던 어느 날, 갑자기 설마? 하는 한 가지 생각이 머릿속을 스쳤고, 확인해본 결과 그 생각은 불행히도 사실로 드러났다.
 
-<img src="/assets/images/cleartype-and-bgr/ohno.webp" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/ohno.webp" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">조졌네</div>
 
 그렇다. 이 TV는 BGR 서브픽셀 레이아웃을 가지고 있는 TV였던 것이다.
@@ -25,7 +25,7 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 
 이 세 가지 색의 밝기는 다른 색의 밝기와 완전히 별도로 조작될 수 있어야 하기 때문에, 각 픽셀마다 개별 색을 내는 부품이 따로따로 심어져 있으며, 이 개별 색을 나타내는 픽셀을 서브픽셀이라고 하며, 이러한 서브픽셀을 픽셀 안에 배치하는 방법을 서브픽셀 레이아웃이라고 부른다.
 
-<img src="/assets/images/cleartype-and-bgr/LCD_RGB.jpg" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/LCD_RGB.jpg" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">일반적인 RGB 서브픽셀 레이아웃 / Luís Flávio Loureiro dos Santos, CC BY 3.0</div>
 
 가장 일반적으로 쓰이는 서브픽셀 레이아웃은 RGB로, 1/3 너비의 서브픽셀을 빨강, 초록, 파랑 순서대로 배치하는 것을 의미한다.
@@ -46,12 +46,12 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 
 아래 그림처럼 벡터 폰트를 너무 낮은 해상도의 화면에 래스터화했을 때를 예시로 들면, 세리프 글꼴이 가지는 삐침 등의 디테일이 사라지는 것은 기본이고, 극단적인 경우 복잡한 글자는 아예 못 알아보게 뭉개져버리는 경우도 있다.
 
-<img src="/assets/images/cleartype-and-bgr/rasterization.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/rasterization.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">벡터 폰트의 래스터화 (사용된 알고리즘: 시누 눈깔과 그림판)</div>
 
 이러한 문제 때문에 운영체제들은 TrueType 폰트를 지원하면서도 시스템 폰트로는 꽤 오랜 기간동안 저해상도 화면에서 높은 가독성을 띄는 비트맵 폰트[^2]만을 사용했으며, 워드프로세서 등은 인쇄했을 때 깔끔하게 나오는 폰트를 화면에는 우둘투둘하게 그려내곤 했다.
 
-<img src="/assets/images/cleartype-and-bgr/smj.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/smj.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">나는 그래도 신명조 폰트는 싫더라</div>
 
 그리고 이런 상황에서 튀어나온, 폰트 렌더링 해상도를 비약적으로 높일 수 있는 창의적인 솔루션 중 하나가 바로 이 글의 주제인 서브픽셀 안티에일리어싱 되시겠다.
@@ -62,28 +62,28 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 
 폰트 안티에일리어싱은 기술적으로 안 될 건 없었지만 어차피 저해상도 화면에서는 글자를 더욱 흐리멍텅하게만 만들어서 별로 쓰이지 않는 기술이었는데, 이를 서브픽셀 수준에서 수행하면 안티에일리어싱을 수행하는 화면의 픽셀 수, 즉 해상도가 3배로 늘어나 훨씬 더 미려한 결과물을 얻을 수 있었던 것이다.
 
-<img src="/assets/images/cleartype-and-bgr/subpixel-1.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/subpixel-1.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">픽셀이 3배!</div>
 
 이 방식의 문제점은, 서브픽셀을 조작하기 위해서는 어쩔 수 없이 색을 사용해야 한다는 것이다. 설령 사용자가 원한 것이 검은 선이더라도, 이를 서브픽셀 수준으로 래스터화하려면 어쩔 수 없이 테두리에 색이 입혀지게 되는 것이다. 이 알록달록한 테두리는 보통 1픽셀 두께이기 때문에 적당한 해상도의 화면에서 대충 볼 때는 눈에 잘 띄지 않지만, 이 방식으로 그려진 글자를 글자 크기를 키우지 않고 스크린샷을 캡쳐해 늘린다던가, 혹은 픽셀이 보일 정도로 극단적인 저해상도 환경에서는 어쩔 수 없이 두드러지게 된다.
 
-<img src="/assets/images/cleartype-and-bgr/subpixel-2.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/subpixel-2.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">제가 그은 검은색 선이 왜 알록달록하죠?</div>
 
-<img src="/assets/images/cleartype-and-bgr/cleartype-scaled.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/cleartype-scaled.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">그림판 만화에서 종종 보이는 늘어난 ClearType의 아티팩트.<br>자세히 보면 위와 같은 구조의 색 배치를 볼 수 있다.</div>
 
 그리고 이 방식의 또 다른 문제점은...바로 RGB 서브픽셀 레이아웃을 사용하지 않는 모니터에서는 결과물이 엉망진창으로 보인다는 것이다.
 
-<img src="/assets/images/cleartype-and-bgr/subpixel-3.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/subpixel-3.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">RGB 서브픽셀 안티에일리어싱된 선을 RGB/BGR 화면에 띄웠을 때.<br>위: 이미지로 저장된 선 / 아래 왼쪽: RGB / 아래 오른쪽: BGR</div>
 
-<img src="/assets/images/cleartype-and-bgr/rgb-on-bgr.jpg" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/rgb-on-bgr.jpg" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">진짜 이렇게 보인다...</div>
 
 다행히도 대부분의 운영체제는 서브픽셀 안티에일리어싱을 수행할 서브픽셀 레이아웃을 변경할 수 있으며, Windows에서는 "ClearType 텍스트 튜너"를 통해 서브픽셀 안티에일리어싱을 RGB 기준으로 할 것인지 BGR 기준으로 할 것인지 설정할 수 있다.
 
-<img src="/assets/images/cleartype-and-bgr/cleartype-adjust.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/cleartype-adjust.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">구원의 손길</div>
 
 하지만...
@@ -98,12 +98,12 @@ LCD 또는 LED 디스플레이에서 하나의 픽셀은 빨강, 초록, 파랑�
 
 Windows는 ClearType이라는 자체적인 서브픽셀 안티에일리어싱만 지원하며 흑백 안티에일리어싱을 지원하지 않지만, MacType이라는 프로그램을 통해 흑백 안티에일리어싱을 강제로 주입할 수 있다. 흑백 안티에일리어싱과 폰트 힌팅은 잘 어울리지 않으므로 MacType에서 폰트 힌팅 또한 최소화해주면, 프로그램 이름처럼 Mac과 유사한 모양의 글꼴을 얻을 수 있다.
 
-<img src="/assets/images/cleartype-and-bgr/mactype-onoff.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/mactype-onoff.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">위: Windows 기본 ClearType (BGR)<br>아래: MacType 흑백 안티에일리어싱, 힌트 사용 안 함</div>
 
 이렇게 사용한 지 약 한 달 쯤 되어가는데, 이것도 눈에 익으니 꽤 나쁘지 않은 것 같다.
 
-<img src="/assets/images/cleartype-and-bgr/cope.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/cleartype-and-bgr/cope.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">나쁘지 않다...리얼루...</div>
 
 ## 결론

@@ -18,7 +18,7 @@ excerpt: "아톰 고생은 사서도 한다"
 
 이 노트북이 좋아서가 아니라, 그 때 그 아저씨처럼, 이걸 사 갈 사람한테 미안해서.
 
-<img src="/assets/images/linux-on-atom/sb11p.jpg" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/linux-on-atom/sb11p.jpg" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">오늘의 주인공, 아이뮤즈 스톰북11 프로</div>
 
 ## 리눅스 돌리면 되겠지
@@ -131,7 +131,7 @@ Wayland에서 배율 지원이 많이 좋아졌다고는 들었는데 메인 컴
 
 문서작업을 할 때는 흐려진 화면이 제법 거슬리지만, 유튜브 볼 때는 별 티 안 난다. 어차피 성능 때문에 유튜브에서 볼 수 있는 영상 해상도도 720p가 한계라 그냥 짝짝 맞는다.
 
-<img src="/assets/images/linux-on-atom/rice.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/linux-on-atom/rice.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">해상도를 1080p로 설정한 경우. 쌀알만하다는 건 비유가 아니다</div>
 
 ### 성능: 웹 브라우저 추천
@@ -172,15 +172,15 @@ Wayland에서 배율 지원이 많이 좋아졌다고는 들었는데 메인 컴
 
 아이뮤즈 스톰북11 프로와 완전히 똑같이 생긴 노트북이 듣보잡 브랜드를 달고 알리익스프레스에서 팔리고 있었다.
 
-<img src="/assets/images/linux-on-atom/sb11p.jpg" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/linux-on-atom/sb11p.jpg" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">아이뮤즈 스톰북11 프로</div>
 
-<img src="/assets/images/linux-on-atom/bdf.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/linux-on-atom/bdf.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">BDF 초박형 노트북 안드로이드 12 OS 핑크 10.1 인치 2GB RAM 64GB 저장 컴퓨터 신제품<br>알리익스프레스 특전 까리한 핫핑크색</div>
 
 또한 완전히 똑같지는 않지만 키보드, 왼쪽 위 LED 3개 등 유사점이 상당히 많은 제품도 엠피지오에서 하나 찾을 수 있었다.
 
-<img src="/assets/images/linux-on-atom/ares11.png" style="display:block; margin-left:auto; margin-right:auto">
+<img src="/blog/assets/images/linux-on-atom/ares11.png" style="display:block; margin-left:auto; margin-right:auto">
 <div class="img-cap">엠피지오 아레스11</div>
 
 뭐...이게 의미하는 건 이 노트북에 대한 아이뮤즈의 기술 지원은 기대할 수 없다는 것 뿐이겠지만...
