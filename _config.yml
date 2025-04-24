@@ -6,7 +6,7 @@ description: >-
   코딩이랑 잡담이랑 뒤죽박죽
 domain: sinu.pe.kr
 url: https://sinu.pe.kr
-baseurl: "/blog/"
+baseurl: "/blog"
 # twitter_username: 
 github_username: sinusinu
 repository: sinusinu/blog
