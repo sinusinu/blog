@@ -75,7 +75,7 @@ footer:
   links:
     - label: "피드"
       icon: "fas fa-rss-square"
-      url: "/feed.xml"
+      url: "/blog/feed.xml"
     - label: "CC BY-NC-SA 4.0"
       icon: "fab fa-creative-commons"
       url: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko"
