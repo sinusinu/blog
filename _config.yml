@@ -16,6 +16,9 @@ author:
   avatar: "/assets/images/profile.jpg"
   bio: 우울한 코딩쟁이
   links:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-brands fa-instagram"
+      url: "https://www.instagram.com/just4sinu/"
     - label: "Bluesky"
       icon: "fab fa-fw fa-brands fa-bluesky"
       url: "https://bsky.app/profile/sinu.pe.kr"
