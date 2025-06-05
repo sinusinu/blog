@@ -4,6 +4,7 @@ date: 2025-05-04 17:19:00 +0900
 last_modified_at: 2025-05-04 18:00:00 +0900
 categories: [ "잡담" ]
 excerpt: "젠장 또 SNS야"
+published: false
 ---
 
 ## 가끔씩 감성사진 찍어서 올려야징
