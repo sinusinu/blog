@@ -92,6 +92,9 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
 
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
 remote_theme: "mmistakes/minimal-mistakes@4.26.1"
 plugins:
   - jekyll-feed
