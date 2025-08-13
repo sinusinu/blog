@@ -14,7 +14,7 @@ repository: sinusinu/blog
 author:
   name: "sinu"
   avatar: "/assets/images/profile.jpg"
-  bio: 우울한 코딩쟁이
+  bio: 비루한 코딩쟁이
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
