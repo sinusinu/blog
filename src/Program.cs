@@ -540,7 +540,7 @@ class Program {
         } else {
             // simple replace key
             switch (key) {
-                case "category.name":
+                case "category.list.name":
                     return categoryName;
                 case "category.list.index.one":
                     return (listIndex + 1).ToString();
