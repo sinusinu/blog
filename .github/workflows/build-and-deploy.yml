@@ -6,6 +6,7 @@ on:
     paths:
       - 'posts/**'
       - 'skel/**'
+      - 'src/**'
   workflow_dispatch:
 
 permissions:
