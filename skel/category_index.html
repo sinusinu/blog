@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카테고리 :: 시누의 블로그</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/sinublog.css">
+</head>
+<body>
+    <div class="content">
+        <div class="common-topbar">
+            <a href="../../">
+                <div class="topbar-left">
+                    <img class="topbar-icon" src="../../assets/icon.png"><span class="topbar-text">시누의 블로그</span>
+                </div>
+                <div class="topbar-right">
+                    <span class="topbar-subtext">%%gents%%</span>
+                </div>
+            </a>
+        </div>
+        <div class="common-lseparator"></div>
+        <div class="list-container">
+            <div class="list-nav-container">
+                <div class="list-nav">카테고리 목록</div>
+                <a href="../"><div class="list-nav list-nav-clickable">전체 목록 보기</div></a>
+            </div>
+            <div class="common-mseparator"></div>
+            %%iterate???category.category???<a href="%0/">
+                <div class="list-pageitem">
+                    <div class="list-pageitem-title">%0</div>
+                    <div class="list-pageitem-subtitle">%1개 게시글</div>
+                </div>
+            </a>???<div class="common-mseparator"></div>%%
+        </div>
+        <div class="common-rseparator"></div>
+        <div class="common-footer">
+            <div><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko"><img src="../../assets/ccbyncsa.svg" width="120px" height="42px"></a></div>
+            <div>© 2023–%%year%% sinu. 모든 권리 보유</div>
+            <div><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko">CC BY-NC-SA 4.0</a> 하에 배포됨</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "type": "category",
+    "in": "category_index.html",
+    "out": "category/index.html",
+    "options": {
+        "categoryList": {
+            "in": "category_list.html",
+            "out": "category/%%category.name%%/%%category.list.index.one%%/index.html"
+        },
+        "categoryListIndex": {
+            "in": "category_list_index.html",
+            "out": "category/%%category.name%%/index.html"
+        }
+    }
+}

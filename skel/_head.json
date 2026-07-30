@@ -1,0 +1,14 @@
+{
+    "dynamicTargets": [
+        "post.json",
+        "list.json",
+        "category.json"
+    ],
+    "staticTargets": [
+    ],
+    "postCopyOps": [
+    ],
+    "options": {
+        "postPerPage": 5
+    }
+}

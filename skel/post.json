@@ -1,0 +1,5 @@
+{
+    "type": "post",
+    "in": "post.html",
+    "out": "post/%%post.path%%/index.html"
+}

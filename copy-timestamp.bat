@@ -1,0 +1,1 @@
+@powershell -command "Get-Date -Format 'yyyy-MM-dd HH:mm:00 +0900' | Set-Clipboard"

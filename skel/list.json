@@ -1,0 +1,11 @@
+{
+    "type": "list",
+    "in": "list.html",
+    "out": "list/%%list.index.one%%/index.html",
+    "options": {
+        "firstPageAsParentIndex": {
+            "in": "list_index.html",
+            "out": "index.html"
+        }
+    }
+}
