@@ -44,12 +44,6 @@ excerpt: "빛이 있으라"
 
 막 발에 채일 정도로 많이 튀어나오는 건 아니지만, 누끼 제대로 안 따인 너저분한 그림자라던가 그런 건 가끔 가다 한두개씩만 보여도 많이 신경쓰이게 되는 건 어쩔 수 없나 싶기도 하고.
 
-이 블로그의 테마는 그냥 설정에서 원하는 색 스키마를 하나 선택하는 식이고 시스템 모드에 맞춰 자동 변경이라던가 그런 기능은 없었는데, 감사하게도 깃헙 레포에 그런 기능을 구현하는 것에 관한 Discussion[^2]이 있었어서 거기서 코드를 낼름해 이 블로그에 적용해놨다. 이제 이 블로그는 시스템이 라이트 모드면 밝은 색으로 나온다.
-
-~~시잡도에도 해놔야되는데...~~완!
-
 ## 주석
 
 [^1]: [how dark mode killed good design - Answer in Progress](https://www.youtube.com/watch?v=Ieq5sNEoc1E)
-
-[^2]: [Allow user to toggle between themes [light/dark]](https://github.com/mmistakes/minimal-mistakes/discussions/2033)
