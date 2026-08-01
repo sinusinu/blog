@@ -34,8 +34,24 @@
         <div class="post-body">
             %%post.body%%
         </div>
+        <div class="common-mseparator"></div>
         <div class="post-tail">
-            
+            <script src="https://giscus.app/client.js"
+                data-repo="sinusinu/blog"
+                data-repo-id="R_kgDOK6xloQ"
+                data-category="Comments"
+                data-category-id="DIC_kwDOK6xloc4Cb0BW"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="noborder_gray"
+                data-lang="ko"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+            </script>
         </div>
         <div class="common-fseparator"></div>
         <div class="common-footer">
@@ -44,5 +60,34 @@
             <div><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko">CC BY-NC-SA 4.0</a> 하에 배포됨</div>
         </div>
     </div>
+    <script>
+        // surely there's gotta be a better way to do this...
+        function updateGiscusTheme() {
+            function sendMessage(message) {
+                const iframe = document.querySelector('iframe.giscus-frame');
+                iframe?.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            }
+
+            sendMessage({ setConfig: { theme: getTargetTheme() } });
+        }
+
+        function checkGiscusLoaded() {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe?.classList.contains('giscus-frame--loading')) {
+                setTimeout(checkGiscusLoaded, 500);
+            } else {
+                setTimeout(updateGiscusTheme(), 1000);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            checkGiscusLoaded();
+        });
+
+        window?.matchMedia?.('(prefers-color-scheme:dark)').addEventListener('change', updateGiscusTheme);
+
+        function isDark() { return window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false; }
+        function getTargetTheme() { return isDark() ? 'noborder_gray' : 'light'; }
+    </script>
 </body>
 </html>

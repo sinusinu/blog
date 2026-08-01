@@ -383,7 +383,7 @@ body {
     justify-content: left;
 }
 .post-tail {
-	padding-bottom: 12px;
+	padding: 12px 0px;
 }
 .footnotes hr {
 	display: none;
