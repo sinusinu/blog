@@ -27,7 +27,9 @@ class Program {
         if (!Directory.Exists(ToAbs("skel")))                          { Panic("Directory 'skel' does not exist!"); return; }
 
         var mdPipeline = new MarkdownPipelineBuilder()
-            .UseAlertBlocks()
+            .UseAlertBlocks(renderKind: (renderer, kind) => {
+                renderer.Write($"<p class=\"markdown-alert-title\"><span class=\"material-symbols-outlined icon-right-padding\">{GetAlertBlockKindIcon(kind.ToString())}</span>{GetAlertBlockKindName(kind.ToString())}</p>");
+            })
             .UseEmphasisExtras()
             .UseFootnotes()
             .UseTaskLists()
@@ -598,6 +600,28 @@ class Program {
             default:
                 return key;
         }
+    }
+
+    static string GetAlertBlockKindName(string kind) {
+        return kind switch {
+            "NOTE" => "알림",
+            "TIP" => "정보",
+            "IMPORTANT" => "중요",
+            "WARNING" => "경고",
+            "CAUTION" => "주의",
+            _ => kind,
+        };
+    }
+
+    static string GetAlertBlockKindIcon(string kind) {
+        return kind switch {
+            "NOTE" => "info",
+            "TIP" => "info",
+            "IMPORTANT" => "info",
+            "WARNING" => "warning",
+            "CAUTION" => "warning",
+            _ => kind,
+        };
     }
 
     static void Panic(string description) {
