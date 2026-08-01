@@ -12,18 +12,20 @@
         <div class="common-topbar">
             <a href="./">
                 <div class="topbar-left">
-                    <img class="topbar-icon" src="assets/icon.png"><span class="topbar-text">시누의 블로그</span>
+                    <img class="topbar-icon" src="assets/icon.png"><span class="topbar-text topbar-title">시누의 블로그</span>
                 </div>
+            </a>
+            <a href="/">
                 <div class="topbar-right">
-                    <span class="topbar-subtext">%%gents%%</span>
+                    <span class="topbar-subtext clickable">시누의 싸이버스페이스</span>
                 </div>
             </a>
         </div>
-        <div class="common-lseparator"></div>
+        <div class="common-fseparator"></div>
         <div class="list-container">
             <div class="list-nav-container">
                 <div class="list-nav">페이지 %%list.index.one%% / %%list.index.one.total%%</div>
-                <a href="category/"><div class="list-nav list-nav-clickable">카테고리 목록 보기</div></a>
+                <a href="category/"><div class="list-nav clickable">카테고리 목록 보기</div></a>
             </div>
             <div class="common-mseparator"></div>
             %%iterate???list.pageitem???<a href="post/%4">
@@ -36,12 +38,12 @@
             </a>???<div class="common-mseparator"></div>%%
             <div class="common-mseparator"></div>
             <div class="list-pager-container">
-                %%repl-cond???not_first_page???<a href="list/%0/"><div class="list-pager list-nav-clickable"><span class="material-symbols-outlined icon-right-padding">chevron_left</span>이전 페이지</div></a>%%
+                %%repl-cond???not_first_page???<a href="list/%0/"><div class="list-pager clickable"><span class="material-symbols-outlined icon-right-padding">chevron_left</span>이전 페이지</div></a>%%
                 <div></div>
-                %%repl-cond???not_last_page???<a href="list/%0/"><div class="list-pager list-nav-clickable">다음 페이지<span class="material-symbols-outlined icon-left-padding">chevron_right</span></div></a>%%
+                %%repl-cond???not_last_page???<a href="list/%0/"><div class="list-pager clickable">다음 페이지<span class="material-symbols-outlined icon-left-padding">chevron_right</span></div></a>%%
             </div>
         </div>
-        <div class="common-rseparator"></div>
+        <div class="common-fseparator"></div>
         <div class="common-footer">
             <div><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko"><img src="assets/ccbyncsa.svg" width="120px" height="42px"></a></div>
             <div>© 2023–%%year%% sinu. 모든 권리 보유</div>
