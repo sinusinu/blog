@@ -48,6 +48,7 @@ class Program {
             if (post is not null) posts.Add(post);
         }
         if (posts.Count == 0) { Panic("No posts found!"); return; }
+        posts.Sort((Post x, Post y) => { return x.Head.DateCreated.CompareTo(y.Head.DateCreated); });
         
         // load and parse skeleton head
         if (!LoadJson(Path.Combine("skel", "_head.json"), out var skelHead)) { Panic("File 'skel/_head.json' does not exist or malformed!"); return; }
