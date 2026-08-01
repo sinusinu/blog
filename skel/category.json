@@ -1,15 +1,15 @@
 {
     "type": "category",
     "in": "category_index.html",
-    "out": "category/index.html",
+    "out": "categories/index.html",
     "options": {
         "categoryList": {
             "in": "category_list.html",
-            "out": "category/%%category.list.name%%/%%category.list.index.one%%/index.html"
+            "out": "categories/%%category.list.name%%/%%category.list.index.one%%/index.html"
         },
         "categoryListIndex": {
             "in": "category_list_index.html",
-            "out": "category/%%category.list.name%%/index.html"
+            "out": "categories/%%category.list.name%%/index.html"
         }
     }
 }

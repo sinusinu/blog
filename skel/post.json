@@ -1,5 +1,5 @@
 {
     "type": "post",
     "in": "post.html",
-    "out": "post/%%post.path%%/index.html"
+    "out": "posts/%%post.path%%/index.html"
 }
