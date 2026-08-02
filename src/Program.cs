@@ -1,5 +1,6 @@
 ﻿using System.Collections.Immutable;
 using System.Globalization;
+using System.Net;
 using System.Runtime.Versioning;
 using System.Text;
 using System.Text.Json;
@@ -397,6 +398,8 @@ class Program {
             switch (key) {
                 case "post.title":
                     return post.Head.Title;
+                case "post.title.escaped":
+                    return WebUtility.HtmlEncode(post.Head.Title);
                 case "post.created.date":
                     return post.Head.DateCreated.ToString("yyyy. MM. dd", new CultureInfo("ko-KR"));
                 case "post.modified.date":
@@ -405,6 +408,10 @@ class Program {
                     return post.Head.DateCreated.ToString("yyyy. MM. dd tt hh:mm", new CultureInfo("ko-KR"));
                 case "post.modified.full":
                     return post.Head.DateModified.ToString("yyyy. MM. dd tt hh:mm", new CultureInfo("ko-KR"));
+                case "post.excerpt":
+                    return post.Head.Excerpt;
+                case "post.excerpt.escaped":
+                    return WebUtility.HtmlEncode(post.Head.Excerpt);
                 case "post.category":
                     return post.Head.Category;
                 case "post.body":
