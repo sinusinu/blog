@@ -119,6 +119,18 @@ body {
 	border-radius: 8px;
 	padding: 8px 12px;
 }
+@media (max-width: 900px) {
+	.topbar-right {
+		transform-origin: center right;
+		transform: scaleX(0.87);
+	}
+	.topbar-text {
+		font-size: 20px;
+	}
+	.topbar-subtext {
+		font-size: 16px;
+	}
+}
 .clickable {
 	border-right: 2px solid var(--content-bg-sub);
 	border-bottom: 2px solid var(--content-bg-sub);
@@ -175,6 +187,11 @@ body {
 	font-size: 20px;
 	border-radius: 8px;
 }
+@media (max-width: 900px) {
+	.list-nav {
+		font-size: 16px;
+	}
+}
 .list-pageitem {
 	padding: 12px 16px;
 	display: flex;
@@ -186,15 +203,23 @@ body {
 	background: var(--content-bg-sub);
 }
 .list-pageitem-title {
-    font-size: 26px;
+	font-size: 26px;
 	font-weight: var(--content-text-weight-title);
 }
 .list-pageitem-subtitle {
 	font-size: 20px;
 	vertical-align: middle;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+@media (max-width: 900px) {
+	.list-pageitem-title {
+		font-size: 22px;
+	}
+	.list-pageitem-subtitle {
+		font-size: 16px;
+	}
 }
 .list-pager-container {
 	width: 100%;
@@ -212,6 +237,11 @@ body {
     align-items: center;
     justify-content: center;
 	border-radius: 8px;
+}
+@media (max-width: 900px) {
+	.list-pager {
+		font-size: 16px;
+	}
 }
 .post-header {
 	margin-top: 12px;
@@ -243,6 +273,16 @@ body {
     justify-content: left;
 	margin-bottom: 4px;
 }
+@media (max-width: 900px) {
+	.post-info-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+	.post-info {
+		font-size: 18px;
+	}
+}
 .post-info-hidden {
 	display: none;
 }
@@ -258,12 +298,12 @@ body {
 	padding-left: 4px;
 }
 .post-body {
-    font-size: 20px;
-    line-height: 1.4;
+	font-size: 20px;
+	line-height: 1.4;
 	font-weight: var(--content-text-weight-normal);
 }
 .post-body h2 {
-    font-size: 28px;
+	font-size: 28px;
 	font-weight: var(--content-text-weight-bold);
 	display: flex;
 	align-items: center;
@@ -272,6 +312,27 @@ body {
 .post-body h2::before {
 	content: "≡";
 	margin-right: 10px;
+}
+.post-body h3 {
+	font-size: 25px;
+	font-weight: var(--content-text-weight-bold);
+}
+.post-body p, .post-body h2, .post-body h3 {
+	margin: 14px 0px;
+}
+@media (max-width: 900px) {
+	.post-body {
+		font-size: 19px;
+	}
+	.post-body h2 {
+		font-size: 26px;
+	}
+	.post-body h3 {
+		font-size: 23px;
+	}
+	.post-body p, .post-body h2, .post-body h3 {
+		margin: 12px 0px;
+	}
 }
 .post-body strong {
 	font-weight: var(--content-text-weight-bold);
