@@ -1,7 +1,7 @@
 ---
 title: 라이트 모드 두 달 사용기 (완)
-date: 2024-08-31 20:04:00 +0900
-last_modified_at: 2026-08-01 16:00:00 +0900
+date: 2024-08-31
+last_modified_at: 2026-08-01
 categories: [ "잡담" ]
 excerpt: "어둠의 땅으로"
 ---

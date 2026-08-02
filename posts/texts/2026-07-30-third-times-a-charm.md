@@ -1,7 +1,7 @@
 ---
 title: "시누의 블로그 또 재개장"
-date: 2026-07-30 18:28:00 +0900
-last_modified_at: 2026-08-01 17:52:00 +0900
+date: 2026-07-30
+last_modified_at: 2026-08-01
 categories: [ "잡담" ]
 excerpt: "너 또 블로그하니"
 ---

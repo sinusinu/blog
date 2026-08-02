@@ -1,9 +1,9 @@
 ---
 title: "내가 AI 그림을 멀리하게 된 이유"
-date: 2025-05-22 21:48:00 +0900
-last_modified_at: 2026-08-02 12:35:00 +0900
+date: 2025-05-22
+last_modified_at: 2026-08-02
 categories: [ "잡담" ]
-excerpt: "“negative_prompt”: “human_touch”"
+excerpt: "\"negative_prompt\": \"human_touch\""
 ---
 
 ## 서론

@@ -4,6 +4,7 @@ using System.Runtime.Versioning;
 using System.Text;
 using System.Text.Json;
 using Markdig;
+using YamlDotNet.Serialization;
 using static Siblsenki.Files;
 
 namespace Siblsenki;
@@ -39,12 +40,15 @@ class Program {
             .UseGenericAttributes()
             .Build();
 
+        var yamlDeserializer = new DeserializerBuilder()
+            .Build();
+
         // read all posts/texts
         Log.I("Parsing posts...");
         var postTextFiles = Directory.GetFiles(ToAbs(Path.Combine("posts", "texts")), "*.md");
         List<Post> posts = new();
         foreach (var postTextFile in postTextFiles) {
-            var post = Post.GeneratePostFromFile(postTextFile, mdPipeline);
+            var post = Post.GeneratePostFromFile(postTextFile, mdPipeline, yamlDeserializer);
             if (post is not null) posts.Add(post);
         }
         if (posts.Count == 0) { Panic("No posts found!"); return; }

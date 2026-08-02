@@ -1,7 +1,7 @@
 ---
 title: 라이트 모드 한 달 사용기
-date: 2024-07-30 13:17:00 +0900
-last_modified_at: 2026-08-01 16:00:00 +0900
+date: 2024-07-30
+last_modified_at: 2026-08-01
 categories: [ "잡담" ]
 excerpt: "빛이 있으라"
 ---

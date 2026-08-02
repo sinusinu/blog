@@ -1,7 +1,7 @@
 ---
 title: "macOS 강제 재시작 이후 colima start가 안 될 때"
-date: 2026-01-18 00:01:00 +0900
-last_modified_at: 2026-08-01 16:00:00 +0900
+date: 2026-01-18
+last_modified_at: 2026-08-01
 categories: [ "컴푸터" ]
 excerpt: "이게 블로그야 메모장이야"
 ---

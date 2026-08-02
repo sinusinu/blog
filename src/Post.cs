@@ -1,6 +1,9 @@
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using Markdig;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 using static Siblsenki.Files;
 
 namespace Siblsenki;
@@ -19,7 +22,7 @@ public class Post {
     }
 
     /// <returns>`null` if file has `published` set to false.</returns>
-    public static Post? GeneratePostFromFile(string relPath, MarkdownPipeline pipeline) {
+    public static Post? GeneratePostFromFile(string relPath, MarkdownPipeline pipeline, IDeserializer yamlDeserializer) {
         // get post path (filename without date)
         string fullFilename = System.IO.Path.GetFileNameWithoutExtension(ToAbs(relPath));
         string postPath = fullFilename;
@@ -33,10 +36,10 @@ public class Post {
         Log.I($"Parsing {fullFilename}");
 
         // -- iterate front matter --
-        string[] lines = File.ReadAllLines(ToAbs(relPath));
+        string text = File.ReadAllText(ToAbs(relPath));
         
         // sanity check
-        if (lines[0] != "---") {
+        if (!text.StartsWith("---")) {
             Log.E($"No front matter found in {relPath}");
             return null;
         }
@@ -45,46 +48,22 @@ public class Post {
         string? title = null;
         string? category = null;
         string? excerpt = null;
-        DateTimeOffset? created = null;
-        DateTimeOffset? modified = null;
+        DateTimeOffset created = DateTimeOffset.MinValue;
+        DateTimeOffset modified = DateTimeOffset.MinValue;
 
-        for (int i = 1; i < lines.Length; i++) {
-            // reached end of front matter
-            if (lines[i] == "---") break;
+        string frontMatterText = text.Substring(3, text.IndexOf("---", 3) - 3).Trim();
+        var frontMatter = yamlDeserializer.Deserialize<FrontMatter>(frontMatterText);
 
-            // sanity check
-            if (!lines[i].Contains(':')) {
-                Log.E($"Malformed front matter found in {relPath}, line {i}");
-                return null;
-            }
+        if (frontMatter.published == false) return null;
 
-            // TODO: do things with front matter
-            string[] fm = lines[i].Split(':', 2, StringSplitOptions.TrimEntries);
+        title = frontMatter.title;
+        category = frontMatter.categories.First() ?? "미분류";
+        excerpt = frontMatter.excerpt;
+        created = frontMatter.date ?? File.GetCreationTime(ToAbs(relPath));
+        modified = frontMatter.last_modified_at ?? File.GetLastWriteTime(ToAbs(relPath));
 
-            switch (fm[0]) {
-                case "title":
-                    title = fm[1].Trim('"');
-                    break;
-                case "categories":
-                    category = fm[1].Trim('[', ']').Split(',', StringSplitOptions.TrimEntries).Select(s => s.Trim('"')).ToArray()[0];
-                    break;
-                case "excerpt":
-                    excerpt = fm[1].Trim('"');
-                    break;
-                case "date":
-                    created = DateTimeOffset.ParseExact(fm[1].Trim('"'), "yyyy-MM-dd HH:mm:ss zzz", CultureInfo.InvariantCulture);
-                    break;
-                case "last_modified_at":
-                    modified = DateTimeOffset.ParseExact(fm[1].Trim('"'), "yyyy-MM-dd HH:mm:ss zzz", CultureInfo.InvariantCulture);
-                    break;
-                case "published":
-                    if (fm[1] == "false") {
-                        Log.W("Found post with published set to false, will be ignored");
-                        return null;
-                    }
-                    break;
-            }
-        }
+        created = new DateTimeOffset(created.Date, created.Offset);
+        modified = new DateTimeOffset(modified.Date, modified.Offset);
 
         if (title is null) {
             Log.E($"title not found in {relPath}");
@@ -101,14 +80,13 @@ public class Post {
 
         PostHead postHead = new() {
             Title = title,
-            DateCreated = created ?? File.GetCreationTime(ToAbs(relPath)),
-            DateModified = modified ?? File.GetLastWriteTime(ToAbs(relPath)),
+            DateCreated = created,
+            DateModified = modified,
             Category = category,
             Excerpt = excerpt,
         };
 
         // -- process body --
-        string text = File.ReadAllText(ToAbs(relPath));
         int textStart = text.IndexOf("---", 4) + 3;
         string body = text.Substring(textStart).Trim();
 
@@ -121,5 +99,14 @@ public class Post {
             Head = postHead,
             Body = htmlBody,
         };
+    }
+
+    public class FrontMatter {
+        public required string title { get; set; }
+        public required DateTimeOffset? date { get; set; }
+        public required DateTimeOffset? last_modified_at { get; set; }
+        public required string[] categories { get; set; }
+        public required string excerpt { get; set; }
+        public required bool published { get; set; } = true;
     }
 }
