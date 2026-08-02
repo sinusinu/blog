@@ -122,7 +122,7 @@ body {
 @media (max-width: 900px) {
 	.topbar-right {
 		transform-origin: center right;
-		transform: scaleX(0.87);
+		transform: scaleX(0.88);
 	}
 	.topbar-text {
 		font-size: 20px;
@@ -255,7 +255,7 @@ body {
 @media (max-width: 900px) {
 	.post-title {
 		margin-left: 0px;
-		font-size: 36px;
+		font-size: 28px;
 	}
 }
 .post-info-container {
@@ -277,10 +277,10 @@ body {
 	.post-info-container {
 		display: flex;
 		flex-direction: column;
-		gap: 2px;
+		gap: 0px;
 	}
 	.post-info {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 .post-info-hidden {
@@ -322,16 +322,17 @@ body {
 }
 @media (max-width: 900px) {
 	.post-body {
-		font-size: 19px;
+		font-size: 16px;
+		line-height: 1.35;
 	}
 	.post-body h2 {
-		font-size: 26px;
+		font-size: 21px;
 	}
 	.post-body h3 {
-		font-size: 23px;
+		font-size: 19px;
 	}
 	.post-body p, .post-body h2, .post-body h3 {
-		margin: 12px 0px;
+		margin: 11px 0px;
 	}
 }
 .post-body strong {
