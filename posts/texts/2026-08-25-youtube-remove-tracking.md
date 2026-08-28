@@ -1,7 +1,7 @@
 ---
 title: "YouTube 웹 트래킹 제거 스크립트"
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-08-28
 categories: [ "맨든것" ]
 excerpt: "oui oui"
 ---
@@ -16,7 +16,7 @@ excerpt: "oui oui"
 
 ## 스크립트
 
-이 스크립트는 약 2초마다 페이지의 모든 `a`를 스캔하여, `href`에 `pp`가 있으면 `pp`와 `si`를 제거한다.
+이 스크립트는 약 2초마다 페이지의 모든 `a`의 `href`와 공유 창의 링크를 스캔하여, 링크에 `pp`가 있으면 `pp`와 `si`를 제거한다.
 
 조금 더 우아하게 처리하는 방법도 있겠지만, 이런 무식한 방식이 가장 확실하고 오래 갈 거라고 생각한다.
 
@@ -24,4 +24,6 @@ excerpt: "oui oui"
 
 [유저스크립트 설치하기](https://gist.github.com/sinusinu/545b02b6445ef53bd2b34b92a014719d/raw/yt-strip-pp.user.js)
 
-공유 모달의 링크에서 si 날리는 것도 하고 싶은데 그건 좀 귀찮을 것 같고...
+## 업데이트 내역
+
+2026/08/28 (1.1): 공유 창의 링크도 처리
