@@ -1,16 +1,14 @@
 ---
 title: "macOS 강제 재시작 이후 colima start가 안 될 때"
 date: 2026-01-18
-last_modified_at: 2026-08-01
+last_modified_at: 2026-11-05
 categories: [ "컴푸터" ]
 excerpt: "이게 블로그야 메모장이야"
 ---
 
 ## 멈추지 않는 도커 알러지
 
-맥 미니를 서버로 사용 중인데, macOS에서 제대로 작동하지 않는 라이브러리가 있어서 우분투 도커 컨테이너를 colima 상에서 굴리고 있다.
-
-그런데 파워 로스 등 가끔씩 예기치 못한 강제 재시작 이후에 `colima start`가 안 먹힐 때가 있더라.
+맥 미니를 서버로 사용 중인데, macOS에서 제대로 작동하지 않는 라이브러리가 있어서 우분투 도커 컨테이너를 colima 상에서 굴리고 있다. 그런데 파워 로스 등 가끔씩 예기치 못한 강제 재시작 이후에 `colima start`가 안 먹힐 때가 있더라.
 
 `--verbose`를 달아서 시도해봐도 별다른 에러 메시지 없이 `FATA[0008] error starting vm: error at 'starting': exit status 1` 같은 기묘한 메시지만 툭 내뱉고 죽어버린다.
 
