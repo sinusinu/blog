@@ -248,14 +248,14 @@ body {
 	margin-bottom: 10px;
 }
 .post-title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: var(--content-text-weight-title);
 	margin-left: -2px;
 }
 @media (max-width: 900px) {
 	.post-title {
 		margin-left: 0px;
-		font-size: 28px;
+		font-size: 22px;
 	}
 }
 .post-info-container {
@@ -265,7 +265,7 @@ body {
 	gap: 8px;
 }
 .post-info {
-    font-size: 20px;
+    font-size: 18px;
 	font-weight: var(--content-text-weight-normal);
 	vertical-align: middle;
     display: flex;
@@ -287,8 +287,8 @@ body {
 	display: none;
 }
 .material-symbols-outlined {
-	width: 20px;
-	font-size: 20px !important;
+	width: 18px;
+	font-size: 18px !important;
 	user-select: none;
 }
 .icon-right-padding {
@@ -298,12 +298,12 @@ body {
 	padding-left: 4px;
 }
 .post-body {
-	font-size: 20px;
-	line-height: 1.4;
+	font-size: 19px;
+	line-height: 1.5;
 	font-weight: var(--content-text-weight-normal);
 }
 .post-body h2 {
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: var(--content-text-weight-bold);
 	display: flex;
 	align-items: center;
@@ -314,25 +314,19 @@ body {
 	margin-right: 10px;
 }
 .post-body h3 {
-	font-size: 25px;
+	font-size: 23px;
 	font-weight: var(--content-text-weight-bold);
-}
-.post-body p, .post-body h2, .post-body h3 {
-	margin: 14px 0px;
 }
 @media (max-width: 900px) {
 	.post-body {
-		font-size: 16px;
-		line-height: 1.35;
+		font-size: 19px;
+		line-height: 1.4;
 	}
 	.post-body h2 {
-		font-size: 21px;
+		font-size: 22px;
 	}
 	.post-body h3 {
-		font-size: 19px;
-	}
-	.post-body p, .post-body h2, .post-body h3 {
-		margin: 11px 0px;
+		font-size: 21px;
 	}
 }
 .post-body strong {
